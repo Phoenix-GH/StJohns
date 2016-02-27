@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.binary42.stjohnsgrammarschoolsporttime" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="PushPlugin">
+        <param name="android-package" value="com.plugin.gcm.PushPlugin" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="ParsePlugin">
+        <param name="android-package" value="org.apache.cordova.core.ParsePlugin" />
+    </feature>
+    <allow-intent href="market:*" />
+    <icon density="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
+    <icon density="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
+    <icon density="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
+    <icon density="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+    <splash density="port-hdpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
+    <splash density="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
+    <splash density="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
+    <splash density="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+    <splash density="land-hdpi" src="www/res/screen/android/screen-ldpi-landscape.png" />
+    <splash density="land-ldpi" src="www/res/screen/android/screen-ldpi-landscape.png" />
+    <splash density="land-mdpi" src="www/res/screen/android/screen-mdpi-landscape.png" />
+    <splash density="land-xhdpi" src="www/res/screen/android/screen-xhdpi-landscape.png" />
+    <name>StJohns</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="icon.png" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="local" />
+</widget>

@@ -1,0 +1,27 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "com.binary42.stjohnsgrammarschoolsporttime"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.binary42.stjohnsgrammarschoolsporttime"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.binary42.stjohnsgrammarschoolsporttime"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.binary42.stjohnsgrammarschoolsporttime"
+        },
+        "org.apache.cordova.core.parseplugin": {
+            "PACKAGE_NAME": "com.binary42.stjohnsgrammarschoolsporttime"
+        }
+    },
+    "dependent_plugins": {}
+}

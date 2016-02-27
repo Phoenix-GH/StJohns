@@ -1,0 +1,20 @@
+2016-02-25 11:00:48.262 StJohns[90889:1088827] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/kimuraisoroku/Library/Developer/CoreSimulator/Devices/67F9741A-99BD-44CF-8A68-06D3C652A312/data/Containers/Data/Application/D8E5C369-335C-4BB7-BA25-3D6198228B22/Library/Cookies/com.binary42.stjohnsgrammarschoolsporttime.binarycookies
+2016-02-25 11:00:48.611 StJohns[90889:1088827] Apache Cordova native platform version 3.9.2 is starting.
+2016-02-25 11:00:48.611 StJohns[90889:1088827] Multi-tasking -> Device: YES, App: YES
+2016-02-25 11:00:48.634 StJohns[90889:1088827] Unlimited access to network resources
+2016-02-25 11:00:48.729 StJohns[90889:1088827] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2016-02-25 11:00:49.895 StJohns[90889:1088827] [CDVTimer][splashscreen] 879.252017ms
+2016-02-25 11:00:49.896 StJohns[90889:1088827] [CDVTimer][TotalPluginStartup] 879.539013ms
+2016-02-25 11:00:49.991 StJohns[90889:1088827] active
+2016-02-25 11:00:50.446 StJohns[90889:1088827] Resetting plugins due to page load.
+2016-02-25 11:00:54.642 StJohns[90889:1088827] Finished load of: file:///Users/kimuraisoroku/Library/Developer/CoreSimulator/Devices/67F9741A-99BD-44CF-8A68-06D3C652A312/data/Containers/Bundle/Application/9C9596C7-F1FB-431C-BBCC-512D91D5A6CA/StJohns.app/www/index.html?page=welcome
+2016-02-25 11:00:54.882 StJohns[90889:1088827] THREAD WARNING: ['ParsePlugin'] took '35.143311' ms. Plugin should use a background thread.
+2016-02-25 11:01:43.117 StJohns[90889:1088827] active
+2016-02-25 11:01:53.178 StJohns[90889:1088827] active

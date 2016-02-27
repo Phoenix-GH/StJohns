@@ -1,0 +1,279 @@
+/* --------------------------------------------- */
+/* Author: http://codecanyon.net/user/CodingJack */
+/* --------------------------------------------- */
+
+/* Main container where width and height are applied */
+.cj-wrapper {
+	margin: 0 auto;
+    height: 140px;
+	/*background-color: #F00;*/
+	
+	/*background-image: url(../img/preloader_white.png);*/
+	background-image: url(../img/preloader_black.png);
+	
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+}
+
+.cj-icons {
+height: 140px;
+	/*background-color: #F00;*/
+	
+}
+
+/* Carousel container where data-attributes are applied  */
+.cj-carousel {
+	
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	-ms-perspective: 1000px;
+	perspective: 1000px;
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+	image-render: optimizeSpeed;	
+	position: relative;
+	visibility: hidden;
+	margin: 0 auto;
+	height: 100%;
+	
+}
+
+/* Main carousel container that will rotate */
+.cj-container {
+	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+		
+}
+
+/* Represents a carousel item */
+.cj-wrapper figure {
+
+	position: absolute;
+	margin: 0;
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+}
+
+/* Gets applied to the reflection */
+.cj-reflection {
+	
+	position: absolute;
+	margin-top: 3px;
+	
+}
+
+/* Gets applied to the mouse-over effect */
+.cj-hover {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+}
+
+/* Item captions */
+.cj-caption {
+	
+	font: 14px Georgia, "Times New Roman", Times, serif;	
+	background-color: #3691EE;
+	line-height: 21px;
+	color: #FFF;
+	
+	text-align: center;
+	overflow: hidden;
+	
+	outline: 3px solid transparent;
+	box-sizing: border-box;
+	
+	visibility: hidden;
+	margin-left: 3px;
+	
+}
+
+/* Gets added on mouse over to the captions */
+.cj-border {
+
+	border-top: 1px solid #3691EE;
+	
+}
+
+/* Positions some of the elements that need to be relative */
+.cj-absolute {
+
+	position: absolute;
+	
+}
+
+/* Adds the "button-mode" to the items that have hyperlinks */
+.cj-mouse {
+
+	cursor: pointer;
+	
+}
+
+/* The caption's main container */
+.cj-caption div {
+
+	padding: 10px;
+	
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255, 255, 255, 0.25);
+	
+}
+
+/* Caption title */
+.cj-caption h3 {
+
+	margin: 0;
+	font: 16px "Patua One", "Times New Roman", Times, serif;	
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+	
+}
+
+/* Caption text */
+.cj-caption p {
+
+	margin: 7px 0 0 0;
+	
+}
+
+/* *********************************** */
+/* GRID FALLBACK CSS ***************** */
+/* *********************************** */
+
+/* Class that gets applied for the thumb grid fallback */
+.cj-fallback {
+
+	width: 960px;
+	height: auto;
+	line-height: 0;
+	text-align: center;
+	
+}
+
+/* Turn on visibility for the fallback */
+.cj-fallback .cj-carousel {
+
+	visibility: visible;
+	display: inline-block;
+	
+}
+
+/* Change the position from absolute to static */
+.cj-fallback .cj-container {
+	
+	position: static;	
+	
+}
+
+/* Gets applied to each thumbnail */
+.cj-fallback figure {
+
+	float: left;
+	position: relative;	
+	overflow: hidden;
+	
+}
+
+/* clear the fallback rows */
+.cj-clear {
+
+	clear: left;
+	
+}
+
+/* The item's caption */
+.cj-fallback .cj-caption {
+	
+	width: 100%;
+	margin-left: 0;
+	position: absolute;
+	outline: none;
+	
+	-moz-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.20);
+	-webkit-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.20);
+	box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.20);
+	
+}
+
+
+/* *********************************** */
+/* SMARTPHONE CSS FOR RESPONSIVE MODE  */
+/* *********************************** */
+
+@media screen and (max-width: 600px) {
+	
+	/* no need for the preloader in responsive mode */
+	.cj-wrapper {
+		
+		background-image: none;
+		
+	}
+	
+	/* The main wrapper */
+	.cj-grid-option {
+
+		width: 100% !important;
+		background-image: none !important;
+		
+	}
+	
+	/* The thumbnail */
+	.cj-responder {
+	
+		margin-left: auto !important;
+		margin-right: auto !important;
+		float: none !important;
+		
+	}
+	
+	/* The caption */
+	.cj-caption-option {
+	
+		position: static !important;
+		height: auto !important;
+		overflow: visible !important;
+		visibility: visible !important;
+		
+		-moz-box-shadow: none !important;
+		-webkit-box-shadow: none !important;
+		box-shadow: none !important;
+	
+	}
+		
+}
+
+
+
+
+
+
+
+

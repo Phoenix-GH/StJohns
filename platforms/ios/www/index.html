@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/cards.css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <title>Hello World</title>
+</head>
+<body>
+
+<div class="panel panel-default">
+    <div class="header header-with-back panel-heading">
+        <button class="back-btn">◀</button>
+                <span class="title" style="
+
+        "></span>
+        <button class="action-btn">Subscribe</button>
+
+    </div>
+    <div class="header header-no-back panel-heading">
+        <span class="title"></span>
+    </div>
+    <div id="ptr">
+        <span class="genericon genericon-next"></span>
+
+        <div class="loading">
+            <span id="l1"></span>
+            <span id="l2"></span>
+            <span id="l3"></span>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="card panel-body" id="welcome">
+            <div class="welcome-header" id="welcome-header">
+                <img src="img/header.png" style="width:100%;"/>
+            </div>
+            <div class="photos">
+                <img id="f1" class="bg" src="img/StJohns1.jpg">
+                <img id="f2" class="bg" src="img/StJohns2.jpg">
+                <img id="f3" class="bg" src="img/StJohns3.jpg">
+            </div>
+
+        </div>
+        <div class="card hide-on-init panel-body" id="sports" style="position:relative;">
+
+            <ul class="list-group" id="sportsList" style="position:absolute;width:100%;top:0;">
+                <li class="list-group-item">Loading...</li>
+            </ul>
+        </div>
+        <div class="card hide-on-init panel-body" id="sportsDetail">
+
+            <ul class="list-group" id="sportsDetailList">
+                <li class="list-group-item">Loading...</li>
+            </ul>
+        </div>
+        <div class="card hide-on-init panel-body" id="teamDetail">
+            <button class="rangeSelector" data-show="7days">Show All</button>
+            <ul class="list-group" id="teamDetailList">
+                <li class="list-group-item">Loading...</li>
+            </ul>
+        </div>
+        <div class="card hide-on-init panel-body" id="events">
+            <ul class="list-group" id="eventsList">
+                <li class="list-group-item">Loading...</li>
+            </ul>
+        </div>
+        <div class="card hide-on-init panel-body" id="eventDetail">
+            Loading...
+        </div>
+        <div class="card hide-on-init panel-body" id="eventRSVP">
+            Event RSVP.
+        </div>
+        <div class="card hide-on-init panel-body" id="maps">
+            <ul class="list-group" id="mapsList">
+                <li class="list-group-item">Loading...</li>
+            </ul>
+        </div>
+        <div class="card hide-on-init panel-body" id="contacts">
+            <ul class="list-group" id="contactsList">
+                <li class="list-group-item">Loading...</li>
+            </ul>
+        </div>
+        <div class="card hide-on-init panel-body" id="contactsDetail">
+            Detail card.
+        </div>
+        <div class="card hide-on-init panel-body" id="messages" style="position:relative;">
+            <ul class="list-group" id="messagesList" style="position:absolute;top:0;  top: 0;
+  height: 100%;
+  width: 100%;">
+                <li class="list-group-item">Loading...</li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+<div class="footer">
+    <div class="footer-nav">
+        <div class="side-fader left-fader" style="background: url('img/left.png');"></div>
+        <div class="side-fader right-fader" style="background: url('img/right.png');"></div>
+
+        <div class="footer-elements owl-carousel">
+            <div class="btn-card">
+
+
+            </div>
+            <div class="btn-card" data-card-id="messages">
+
+                <img src="img/CBC App Icons-messages.png"/>
+
+            </div>
+            <div class="btn-card" data-card-id="contacts">
+
+                <img src="img/CBC App Icons-contacts.png"/>
+
+            </div>
+            <div class="btn-card" data-card-id="sports">
+
+                <!-- The image to load, place the image url inside the "data-src" attribute -->
+                <img src="img/CBC App Icons-cocurricular.png"/>
+
+            </div>
+            <div class="btn-card" data-card-id="maps">
+
+                <img src="img/CBC App Icons-maps.png"/>
+
+            </div>
+            <div class="btn-card" data-card-id="events">
+
+                <img src="img/CBC App Icons-events.png"/>
+
+            </div>
+            <div class="btn-card">
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-message">Success, Wisdom, Balance</div>
+
+</div>
+<div class="templates">
+
+
+    <script type="text/templates" id="eventTemplate">
+        <li class="list-group-item clickable  <% if(object.attributes.Active == false) { %>hidden<%}%>"
+            data-card-id="eventDetail" data-object-id="<%=object.id%>">
+            <div>
+                <p class="tappable_text"><%= object.attributes.EventName %></p>
+
+                <p><%= object.attributes.EventDateTime %></p>
+
+                <p class="tappable_text"><%= object.attributes.EventVenue %></p>
+            </div>
+            <img src="img/1409509416_icon-arrow-right-b-128.png" class="pull-right arrow"/></li>
+    </script>
+    <script type="text/templates" id="eventDetailTemplate">
+
+        <div class="container" style="text-align:center;">
+            <p class="tappable_text"><%= object.attributes.EventName %></p>
+
+            <p><%= object.attributes.EventDateTime %></p>
+
+            <p><%= object.attributes.EventDateTime %></p>
+            <span class="tappable_text open-map" data-object-id="<%= object.id %>" href="#"><%= object.attributes.EventVenue %></span>
+            <br>
+
+            <p><%= object.attributes.EventDescription %></p>
+        </div>
+    </script>
+    <script type="text/templates" id="eventRSVPTemplate">
+        <div class="row" style="margin-top: 15px;">
+            <div class="container col-xs-10 col-xs-offset-1">
+                <input type="text" placeholder="name(s)" class="form-control input-lg" id="RSVP_form_name"><br>
+                <input type="number" placeholder="Number attending" class="form-control input-lg" id="RSVP_form_number"><br>
+                <button class="btn btn-default btn-lg btn-block" id="RSVP_form_submit">Submit</button>
+
+            </div>
+        </div>
+
+    </script>
+    <script type="text/templates" id="eventDetailNoEvents">
+        <li class="list-group-item">
+
+            <div class="dialog" onclick="window.history.back();return false;">No Events are currently scheduled.</div>
+
+        </li>
+    </script>
+
+
+    <script type="text/templates" id="sportTemplate">
+        <li class="list-group-item clickable" data-card-id="sportsDetail" data-object-id="<%=object.id%>">
+            <%=object.attributes.SportsName%>
+            <img src="img/1409509416_icon-arrow-right-b-128.png" class="pull-right arrow"/></li>
+    </script>
+    <script type="text/templates" id="sportsDetailTemplate">
+        <li class="list-group-item clickable" data-card-id="teamDetail" data-object-id="<%=object.id%>">
+
+            <div>
+                <%=object.attributes.Team %> <br>
+
+            </div>
+
+
+            <img src="img/1409509416_icon-arrow-right-b-128.png" class="pull-right arrow"/></li>
+    </script>
+    <script type="text/templates" id="teamDetailTemplate">
+        <li class="list-group-item <% if(object.attributes.Active == false) { %>cancelled<%}%> open-by-data-venue"
+            data-venue="<%= object.attributes.Venue%>">
+            <div class="this-item-cancelled">Cancelled</div>
+            <div>
+                <%=object.attributes.Team %> <br>
+                <span class="nobold">vs.</span> <br>
+                <%=object.attributes.Opposition %> <br>
+                <span class="nobold">at</span> <br>
+                <%=object.attributes.Venue %>
+            </div>
+
+            <div style="position:absolute;right: 30px; top:8px;">
+                <%=object.attributes.DateTime %> <br><%=object.attributes.CoachName %>
+            </div>
+            <img src="img/1409509416_icon-arrow-right-b-128.png" class="pull-right arrow"/></li>
+    </script>
+    <script type="text/templates" id="sportsDetailNoSports">
+        <div class="dialog" onclick="window.history.back();return false;">No <%= sport %> teams are found</div>
+    </script>
+
+    <script type="text/templates" id="mapTemplate">
+        <li class="list-group-item open-map" data-card-id="mapsDetail" data-object-id="<%=object.id%>">
+
+            <%=object.attributes.Venue%>
+            <img src="img/1409509416_icon-arrow-right-b-128.png" class="pull-right arrow"/></li>
+    </script>
+    <script type="text/templates" id="messageTemplate">
+        <li class="list-group-item" data-object-id="<%=object.id%>" style="overflow: hidden;">
+            <div style="width:280px;float: left;"><%=object.attributes.Message%></div>
+            <div style="float: right;"><%= object.attributes.date_formatted %></div>
+        </li>
+    </script>
+
+
+    <script type="text/templates" id="contactTemplate">
+        <li class="list-group-item clickable" data-card-id="contactsDetail" data-object-id="<%=object.id%>">
+            <img src="img/contacts64.png"/>
+            <%=object.attributes.ContactName%>
+            <img src="img/1409509416_icon-arrow-right-b-128.png" class="pull-right arrow"/></li>
+    </script>
+    <script type="text/templates" id="ContactsDetailTemplate">
+        <div class="container">
+            <h3><%= object.attributes.ContactName %></h3>
+            <a href="tel:<%= object.attributes.PhoneNumber%>" class="tappable_text"><%= object.attributes.PhoneNumber
+                %></a><br>
+            <a href="mailto:<%= object.attributes.Email %>?subject=Enquiry" class="tappable_text"><%=
+                object.attributes.Email %></a><br><br>
+
+            <p class="tappable_text"><%= object.attributes.Address.split(",").join("<br>") %><br><br>
+                <%= object.attributes.PostalAddress.split(",").join("<br>") %>
+            </p>
+        </div>
+
+        <% if (object.attributes.Location != undefined) { %>
+        <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= object.attributes.Location.latitude %>,<%= object.attributes.Location.longitude %>&size=360x300&zoom=16&markers=|<%= object.attributes.Location.latitude %>,<%= object.attributes.Location.longitude %>"
+             style="width: 100%;"/>
+        <% } else if(object.attributes.Address != undefined) { %>
+        <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= encodeURIComponent(object.attributes.Address) %>&size=360x300zoom=16&markers=label:|<%= encodeURIComponent(object.attributes.Address) %>"
+             style="width: 100%;"/>
+
+        <% } %>
+
+    </script>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+ 
+<script src="js/jquery.mobile-events.min.js"></script>
+ 
+<script src="js/parse-1.2.19.js"></script>
+ 
+<script src="js/bootstrap.min.js"></script>
+ 
+<script src="js/moment.js"></script>
+ 
+<script src="js/cookies.min.js"></script>
+ 
+<script src="js/underscore.js"></script>
+ 
+<script src="js/app.js"></script>
+ 
+<script src="js/hammer.min.js"></script>
+ 
+<script src="js/wptr.1.1.js"></script>
+ 
+<script src="owl-carousel/owl.carousel.js"></script>
+ 
+<script type="text/javascript" src="cordova.js"></script>
+ 
+<script type="text/javascript" src="js/PushNotification.js"></script>
+ 
+<script type="text/javascript" src="js/index.js"></script>
+   
+
+<script>
+    var dragging = false;
+    var refreshing = false;
+    var starty = -1;
+    var orgtop = 0;
+    var refresh_target = "";
+    function start_drag() {
+        dragging = true;
+        starty = event.touches[0].pageY;
+        orgtop = parseInt($(refresh_target).css('top').replace("px", ""));
+        console.log(orgtop);
+    }
+    $(function () {
+        $("body").on('touchstart', "#sportsList li", function (e) {
+            if (refreshing) {
+                return;
+            }
+            refresh_target = "#sports";
+            start_drag();
+        });
+
+        $("body").on('touchstart', "#messagesList li", function (e) {
+            if (refreshing) {
+                return;
+            }
+            refresh_target = "#messages";
+            start_drag();
+        });
+
+        $("body").on('touchmove', function (e) {
+            if (dragging) {
+                var event = window.event;
+                var cury = event.touches[0].pageY;
+                var newtop = orgtop + (cury - starty);
+                $(refresh_target).css({top: newtop});
+                if (cury - starty > 36) {
+                    dragging = false;
+                    refreshing = true;
+                    $(refresh_target).css({top: 42});
+                    switch (refresh_target) {
+                        case "#sports":
+                            parseLoad.sports();
+                            break;
+                        case "#messages":
+                            parseLoad.messages();
+                            break;
+                    }
+                }
+            }
+        });
+        $("body").on('touchend', function (e) {
+            if (dragging) {
+
+                dragging = false;
+            }
+        });
+    })
+</script>
+</body>
+</html>

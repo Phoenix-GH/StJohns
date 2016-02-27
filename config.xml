@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.binary42.stjohnsgrammarschoolsporttime" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>StJohns</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <!--Icons and Splash Screens -->
+    <icon src="icon.png" />
+    <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+        <icon src="www/res/icon/android/icon-36-ldpi.png" density="ldpi" />
+        <icon src="www/res/icon/android/icon-48-mdpi.png" density="mdpi" />
+        <icon src="www/res/icon/android/icon-72-hdpi.png" density="hdpi" />
+        <icon src="www/res/icon/android/icon-96-xhdpi.png" density="xhdpi" />
+
+        <splash src="www/res/screen/android/screen-ldpi-portrait.png" density="port-hdpi"/>
+        <splash src="www/res/screen/android/screen-ldpi-portrait.png" density="port-ldpi"/>
+        <splash src="www/res/screen/android/screen-mdpi-portrait.png" density="port-mdpi"/>
+        <splash src="www/res/screen/android/screen-xhdpi-portrait.png" density="port-xhdpi"/>
+        <splash src="www/res/screen/android/screen-ldpi-landscape.png" density="land-hdpi"/>
+        <splash src="www/res/screen/android/screen-ldpi-landscape.png" density="land-ldpi"/>
+        <splash src="www/res/screen/android/screen-mdpi-landscape.png" density="land-mdpi"/>
+        <splash src="www/res/screen/android/screen-xhdpi-landscape.png" density="land-xhdpi"/>
+    </platform>
+    <platform name="ios">
+        <icon src="www/res/icon/ios/icon-57.png" width="57" height="57" />
+        <icon src="www/res/icon/ios/icon-57-2x.png" width="114" height="114" />
+        <icon src="www/res/icon/ios/icon-60.png" width="60" height="60" />
+        <icon src="www/res/icon/ios/icon-60-2x.png" width="120" height="120" />
+        <icon src="www/res/icon/ios/icon-72.png" width="72" height="72" />
+        <icon src="www/res/icon/ios/icon-72-2x.png" width="144" height="144" />
+        <icon src="www/res/icon/ios/icon-76.png" width="76" height="76" />
+        <icon src="www/res/icon/ios/icon-76-2x.png" width="152" height="152" />
+
+        <splash src="www/res/screen/ios/screen-iphone-portrait.png" width="320" height="480"/>
+        <splash src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" height="960"/>
+        <splash src="www/res/screen/ios/screen-iphone-landscape.png" width="480" height="320"/>
+        <splash src="www/res/screen/ios/screen-iphone-landscape-2x.png" width="960" height="480"/>
+        <splash src="www/res/screen/ios/screen-ipad-portrait.png" width="768" height="1024"/>
+        <splash src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" height="768"/>
+        <splash src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" height="1136"/>
+        <splash src="www/res/screen/ios/screen-ipad-portrait-2x.png" width="1536" height="2048"/>
+        <splash src="www/res/screen/ios/screen-ipad-landscape-2x.png" width="2048" height="1536"/>
+        <splash src="www/res/screen/ios/splash-screen-2048x1242.png" width="2208" height="1242"/>
+        <splash src="www/res/screen/ios/splash-screen-2048x1496.png" width="2208" height="1496"/>
+        <splash src="www/res/screen/ios/splash-screen-1536x2008.png" width="1536" height="2008"/>
+        <splash src="www/res/screen/ios/splash-screen-1334x750.png" width="1334" height="750"/>
+        <splash src="www/res/screen/ios/splash-screen-1242x2208.png" width="1242" height="2208"/>
+        <splash src="www/res/screen/ios/splash-screen-1024x748.png" width="1024" height="748"/>
+        <splash src="www/res/screen/ios/splash-screen-768x1004.png" width="768" height="1004"/>
+        <splash src="www/res/screen/ios/splash-screen-750x1334.png" width="750" height="1334"/>
+        <splash src="www/res/screen/ios/splash-screen-2008x1536.png" width="2008" height="1536"/>
+    </platform>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="BackupWebStorage" value="local"/>
+</widget>

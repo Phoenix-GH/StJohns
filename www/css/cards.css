@@ -1,0 +1,141 @@
+#welcome {
+    /*background: url("../images/school-child.jpg") no-repeat fixed center;*/
+}
+#welcome .bg {
+      position:absolute;
+      top:0;
+    left: 0;
+    top: 0;
+  }
+
+
+@-webkit-keyframes fade1 {
+    0% {opacity: 0;}
+    33% {opacity: 1;}
+    66% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes fade2 {
+    0% {opacity: 0;}
+    33% {opacity: 0;}
+    66% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes fade3 {
+    0% {opacity: 1;}
+    33% {opacity: 0;}
+    66% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+@keyframes fade1 {
+    0% {opacity: 0;}
+    33% {opacity: 1;}
+    66% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade2 {
+    0% {opacity: 0;}
+    33% {opacity: 0;}
+    66% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes fade3 {
+    0% {opacity: 1;}
+    33% {opacity: 0;}
+    66% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+/*@keyframes fade1 {
+    0% {opacity: 0;}
+    25% {opacity: 1;}
+    50% {opacity: 0;}
+    75% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade2 {
+    0% {opacity: 0;}
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade3 {
+    0% {opacity: 0;}
+    25% {opacity: 0;}
+    50% {opacity: 0;}
+    75% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes fade4 {
+    0% {opacity: 1;}
+    25% {opacity: 0;}
+    50% {opacity: 0;}
+    75% {opacity: 0;}
+    100% {opacity: 1;}
+}*/
+#f1 {
+    -webkit-animation-name: fade1;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 18s;
+    animation-name: fade1;
+    animation-iteration-count: infinite;
+    animation-duration: 18s;
+}
+#f2 {
+    -webkit-animation-name: fade2;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 18s;
+    animation-name: fade2;
+    animation-iteration-count: infinite;
+    animation-duration: 18s;
+}
+#f3 {
+    -webkit-animation-name: fade3;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 18s;
+    animation-name: fade3;
+    animation-iteration-count: infinite;
+    animation-duration: 18s;
+}
+
+
+.header .action-btn {
+    display:none;
+}
+.header.show-action-button .action-btn {
+    display:block;
+}
+.header .title {
+    width: 100%;
+    display: block;
+  /*  padding-left: 53px; */
+    font-size:12pt;
+}
+@media (max-width:320px)
+{
+    .header .title
+    {
+        font-size:10pt;
+    }
+}
+
+.header.show-action-button .title {
+
+   /* padding-right: 120px;*/
+}
+
+#welcome .cbc-logo-welcome {
+    width: 60%;
+    position:  absolute;
+    left: 20%;
+    border-radius: 15px;
+    padding:  10px;
+    background:  rgba(0,0,0,0.99);
+}
+.cbc-logo-welcome img {
+    width: 100%;
+}
